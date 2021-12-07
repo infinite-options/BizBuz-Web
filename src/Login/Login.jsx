@@ -1,0 +1,105 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
+import Img from "../Assets/Images/Home-BizBuz.svg"
+
+import "../Home/Home.css"
+import { Link } from "react-router-dom";
+import TextField from '@mui/material/TextField';
+import { makeStyles } from "@mui/styles";
+import InputBase from '@mui/material/InputBase';
+// import Dialog from '@mui/material/core/Dialog';
+// import DialogActions from '@mui/material/core/DialogActions';
+// import DialogContent from '@mui/material/core/DialogContent';
+// import DialogContentText from '@mui/material/core/DialogContentText';
+// import DialogTitle from '@mui/material/core/DialogTitle';
+
+const useStyles = makeStyles({
+  textfield:{
+    border:'2px solid black'
+  },
+});
+export default function Login(){
+
+  const classes = useStyles();
+
+    const [open, setOpen] = React.useState(false);
+    
+    const handleClickOpen = () => {
+      setOpen(true);
+    };
+  
+    const handleClose = () => {
+      setOpen(false);
+     
+    };
+
+    return(
+    <div className="HomeContainer" style={{marginBottom:'5rem'}}>
+          <div >
+                <img
+                    src={Img}
+                    style={{width:'15rem', marginTop:'2rem'}}
+                    className="CardImage"
+                    alt="An image of Leena Marathay"
+                    />
+            </div>
+            <div className="CardTitle">
+                Login
+            </div>
+            <div style={{marginTop:'1rem'}}>
+                <Link className="CardText" style={{fontSize:'20px'}} to="/signUp" onClick={handleClickOpen}>
+                or sign up with Email
+                </Link>
+            </div>
+            <div className = "CardFormParent" >
+              <div className="CardForm">
+                    <div className="CardFormText">
+                        Email
+                    </div>
+                    <div>
+                    <input className="CardTextInput" />
+                    </div>
+                </div>
+                <div className="CardForm">
+                    <div className="CardFormText">
+                        Password
+                    </div>
+                    <div>
+                        <input className="CardTextInput" />
+                    </div>
+                </div>
+            </div>
+            <div>
+                <Link className="CardButton" style={{textDecoration:'none', width:'100%'}} to="signup" onClick={handleClickOpen}>
+                Login
+                </Link>
+            </div>
+            <div style={{marginTop:'1rem'}}>
+                <Link className="CardText"  style={{textDecoration:'none', fontSize:'20px'}} to="signup" onClick={handleClickOpen}>
+               Forget Password?
+                </Link>
+            {/* </div> */}
+            </div>
+           
+            {/* <Dialog
+                    open={open}
+                    onClose={handleClose}
+                    aria-labelledby="alert-dialog-title"
+                    aria-describedby="alert-dialog-description"
+                  >
+                    <DialogTitle id="alert-dialog-title">{"Message Recieved"}</DialogTitle>
+                    <DialogContent>
+                      <DialogContentText id="alert-dialog-description">
+                        Thanks for your Message! We have sent a copy to your email.
+                      </DialogContentText>
+                    </DialogContent>
+                    <DialogActions>
+                      <Button onClick={handleClose} color="primary">
+                        Close
+                      </Button>
+                    </DialogActions>
+            </Dialog> */}
+    </div>
+    )
+}

@@ -1,0 +1,580 @@
+/* @font-face {
+    font-family: Hoefler Text;
+    src: url('../fonts/Hoefler-Text.ttc');
+    font-family: Hoefler Text Bold;
+    src: url('../fonts/HoeflerText\ Bold.otf');
+    font-family: SF Pro Display Regular;
+    src: url('../fonts/SF-Pro-Display-Regular.otf');
+  } */
+
+  /* -------------- Scroll View Style ------------------------------------------------*/
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #FFFFFF; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #000000; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #FFFFFF; 
+  }  
+
+  /* -------------- Parent Conatiner in Home.jsx ------------------------------------------------*/
+
+  /*Parent Container For Home.jsx */
+  .HomeContainer{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* grid-template-columns: repeat(1, auto); */
+
+  }
+
+  /* -------------- Child Conatiners in Home.jsx ------------------------------------------------*/
+
+  /* Card Format for all Intro, About, Service & Contact */
+.Card{
+  width: 100%;
+  /* width: clamp(200px, 50%, 600px); */
+  height: auto;
+
+  margin: 0% 0% 0% 0%;
+  /* padding: 5%;  */
+
+  background-color: white;
+
+}
+
+
+.CardGrid{
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  /* grid-column-gap: 5% ;  */
+  margin: 0px;
+  /* padding: 0%; */
+  padding:5% 15% 5% 15%;
+}
+
+.CardGridPackage{
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-column-gap: 5% ; 
+  margin: 0px;
+  /* padding: 0%; */
+  padding:5% 15% 5% 15%;
+}
+
+.CardFormParent{
+  margin: 5% 20% 5% 20%;
+}
+
+.CardForm{
+
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.CardFormGrid{
+  display:grid;
+  grid-template-columns:repeat(2,auto);
+  padding:5% 20% 5% 20%;
+}
+
+.CardFormText{
+  flex:1.5;
+  font-size:20px;
+  height:2rem;
+  font-weight: bold;
+  text-align:left;
+}
+
+.CardTextInput{
+  border:2px solid black;
+  border-radius:8px;
+  width:35rem;
+  height:2rem;
+  /* margin-left: 2rem; */
+}
+
+.CardImage{
+  object-fit:contain;
+  height:100%;
+  width:20rem;
+}
+
+
+
+.CardTitle{
+  font-family:  Hoefler Text Bold;
+  color:black;
+  font-size: 52px;
+  /* font-style: italic; */
+  font-weight: bold;
+  padding: 0px;
+  text-align: left;
+}
+
+.CardText{
+  font-family:SF Pro Display Regular;
+  color: black;
+  font-size: 32px;
+  /* margin-right:1.8rem; */
+  font-weight: bold;
+  /* padding-left:5%; */
+  /* padding-right:5%; */
+  /* flex:1; */
+}
+
+
+.CardButton{
+  text-transform:none;
+  background-color:#F84E1A;
+  color:white;
+
+  font-size:24px;
+
+  width:auto;
+  height:2rem;
+
+  margin-right:1.8rem;
+  margin-top: 2rem;
+  border:0px;
+  padding: 2%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 32px;
+
+  cursor: pointer;
+  
+}
+
+
+.PriceTile{
+  display:grid;
+  grid-template-columns:repeat(3, 20%);
+  grid-column-gap:2rem;
+  justify-content:center;
+}
+
+
+.ButtonGrid{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, auto);
+  grid-column-gap: 5% ;
+
+  margin: 0px;
+  /* padding: 0%; */
+  /* padding:3%; */
+}
+
+
+.CalendarTimeButton{
+  color:#0062FF;
+  width:10rem;
+  height:3rem;
+  background-color:#FCF621;
+  border:2px solid #0062FF;
+  border-radius:24px;
+  font-weight:bold;
+  font-size:20px;
+  cursor: pointer;
+}
+
+
+.CalendarTimeButton :hover,
+.CalendarTimeButton :focus{
+  background: #0062FF;
+}
+
+
+.ThankYouFormInput{
+  width:45rem;
+  height:2rem;
+}
+
+.ThankYouComments{
+  background-color:#536DFE;
+  padding:5% 20% 5% 20%;
+}
+
+/* Input for all the contact.jsx */
+.CardInput{
+  font-family: SF Pro Display Regular ;
+  width: 20rem;
+  height:3rem;
+  margin-top:1rem;
+  font-size:16px;
+  margin-right:1.8rem;
+  border: 2px solid red;
+}
+
+.NewInput{
+
+  width:75%;
+  height:3rem;
+
+  margin-right: 1.8rem;
+  /* margin-right:1.8rem; */
+
+}
+
+.DesignButton{
+
+  text-transform:none;
+  text-decoration: none;
+  background-color:#536DFE;
+  color:white;
+
+  font-size:20px;
+
+  width:auto;
+  height:2rem;
+  /* padding: 5%; */
+
+  margin-top: 2rem;
+  border:0px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+}
+
+.DesginDropDown{
+  display: flex;
+}
+
+.ManageSubscriptionGrid{
+  display:grid;
+  grid-template-columns:repeat(3, auto);
+  grid-column-gap:5%;
+  margin-top:2rem;
+}
+
+.subscriptionGrid{
+  display:grid;
+  grid-template-columns:repeat(2,auto);
+  margin-left:0%;
+  margin-Top:2rem;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  /* grid-row-gap: 10%; */
+  background-color: #fff;
+  color: #444;
+  margin-top: 2rem;
+}
+
+.FooterTextWrapper{
+ color:white;
+ background-color: black;
+ font-size:18px;
+ /* display:flex;
+ justify-content:space-evenly; */
+ display: grid;
+ grid-template-columns: repeat(3, auto);
+ margin-top: 0rem;
+}
+
+.FooterText{
+  display:flex;
+  flex-direction:column;
+  text-align: center;
+  justify-content: center;
+  /* margin-top:1rem; */
+  padding:1rem;
+  font-size: 12px;
+}
+
+.FooterTitle{
+  color:#C3A336;
+  font-size:20px;
+  text-align: left;
+  border:2px solid blue;
+  padding-left: 20%;
+  padding-bottom: 5%;
+}
+
+
+
+@media screen and (max-width: 1050px) {
+
+    /* Card Format for all Intro, About, Service & Contact */
+.Card{
+  width: 100%;
+  /* width: 95%; */
+  /* width: clamp(200px, 50%, 600px); */
+  height: auto;
+
+  margin: 5% 0% 5% 0%;
+  /* padding: 5%;  */
+
+  background-color: white;
+
+}
+
+.CardGrid{
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  /* grid-column-gap: 5% ; */
+
+  margin: 0px;
+  /* padding: 0%; */
+  padding:3%;
+}
+
+
+.CardGridPackage{
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  /* grid-row-gap: 10% ;  */
+  margin: 0px;
+  /* padding: 0%; */
+  padding:5% 10% 5% 10%;
+}
+
+.CardFormParent{
+  margin: 5% 10% 5% 10%;
+}
+
+.CardForm{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items:center; */
+    margin-top: 0rem;
+
+}
+.CardFormGrid{
+  display:grid;
+  grid-template-columns:repeat(1,auto);
+  padding:5% 20% 5% 20%;
+}
+
+.CardFormText{
+  font-size:20px;
+  height:2rem;
+  /* text-align:left; */
+}
+
+.CardTextInput{
+  border:3px solid black;
+  border-radius:8px;
+  width:100%;
+  height:2rem;
+  margin-left: 0rem;
+
+}
+
+.CardTitle{
+  font-family:  Hoefler Text Bold;
+  color:black;
+  font-size: 24px;
+  font-style: italic;
+  /* font-weight: bold; */
+  margin-right:0rem;
+  padding: 0px;
+  text-align: left;
+}
+
+.CardButton{
+  text-transform:none;
+  background-color:#F84E1A;
+  color:white;
+
+  font-size:16px;
+
+  width:auto;
+  height:2rem;
+
+  margin-right:0rem;
+  margin-top: 2rem;
+  border:0px;
+  padding: 3%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 32px;
+
+  cursor: pointer;
+}
+
+.CardImage{
+  object-fit:contain;
+  height:auto;
+  width:5rem;
+}
+
+.CardText{
+  font-family:SF Pro Display Regular;
+  color: black;
+  font-size: 16px;
+  margin-right:0rem;
+  margin-bottom: 1rem;
+  /* padding-left:5%; */
+  /* padding-right:5%; */
+  flex:1;
+}
+
+.PriceTile{
+  display:grid;
+  grid-template-columns:repeat(1, 80%);
+  grid-column-gap:0rem;
+  grid-row-gap: 1rem;
+  justify-content:center;
+}
+
+.CalendarTimeButton{
+  color:#0062FF;
+  width:10rem;
+  height:3rem;
+  background-color:#FCF621;
+  border:2px solid #0062FF;
+  border-radius:24px;
+  font-weight:bold;
+  font-size:20px;
+}
+
+.ThankYouFormInput{
+  width:80%;
+  height:2rem;
+  
+}
+
+.ThankYouComments{
+  background-color:#536DFE;
+  padding:5% 5% 5% 5%;
+}
+
+.ServiceContainer{
+  display:flex;
+  flex-direction: column;
+  margin-top:1rem;
+  background-color:#DADADA
+}
+
+.NewInput{
+
+  width:75%;
+  height:3rem;
+
+  margin-right: 0rem;
+
+  /* margin-right:1.8rem; */
+
+}
+
+.DesignButton{
+
+  text-transform:none;
+  text-decoration: none;
+  background-color:#536DFE;
+  color:white;
+
+  font-size:20px;
+
+  width:75%;
+  height:2rem;
+  /* padding: 5%; */
+
+  margin-top: 2rem;
+  border:0px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+}
+
+.DesginDropDown{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subscriptionGrid{
+  display:grid;
+  grid-template-columns:repeat(1,auto);
+  margin-left:10%;
+  margin-Top:2rem;
+}
+
+
+.ManageSubscriptionGrid{
+  display:grid;
+  grid-template-columns:repeat(1, auto);
+  grid-column-gap:0%;
+  margin-top:2rem;
+}
+
+.Contact_Map{
+  border: 0;
+  width: 100%;
+  /* width: 15rem; */
+  border-radius: 0%;
+  height: 20rem;
+  margin-right:0rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.FooterTextWrapper{
+  color:#C3A336;
+  font-size:18px;
+  display:flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+  align-items: center;
+  margin-left:0rem;
+  /* border:2px solid blue */
+ }
+
+ .wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  /* grid-row-gap: 10%; */
+  background-color: #fff;
+  color: #444;
+  margin-top: 2rem;
+}
+
+.MobileImage{
+  width: 70%;
+  height: 2rem;
+  object-fit: contain;
+}
+
+.FooterText{
+  text-align:center;
+  border-right:0px solid #424242;
+  /* border: 2px solid green; */
+  margin-top:2rem;
+  padding-right:0rem;
+  padding:0rem;
+}
+}
